@@ -39,18 +39,11 @@
               flex-grow: 1;
               padding-top: 1rem;
             }
-            .nav-link {
-              color: yellow;
-              text-decoration: none;
-            }
-            .nav-link:hover {
-              text-decoration: underline;
-            }
           </style>
-          <div><a class="nav-link" href="#football">La liga</a></div>
-          <div><a class="nav-link" href="#champions">Champions</a></div>
-          <div><a class="nav-link" href="#f1">F1</a></div>
-          <div><a class="nav-link" href="#sports">Otros</a></div>
+          <div><a class="nav-link" href="#football">⚽</a></div>
+          <div><a class="nav-link" href="#champions">✨</a></div>
+          <div><a class="nav-link" href="#f1">🏁</a></div>
+          <div><a class="nav-link" href="#sports">🏀</a></div>
         </nav>
         <div id="chanels">
           <style type="text/css" scoped>
@@ -59,11 +52,18 @@
               flex-grow: 4;
               flex-wrap: wrap;
             }
+            .h2-title {
+              margin-bottom: 0;
+              text-transform: uppercase;
+            }
+            .h3-title {
+            }
             .data-display {
               display: flex;
               flex-direction: column;
               flex-grow: 2;
               padding-left: 3rem;
+              padding-bottom: 3rem;
               min-width: 10vw;
             }
             .bootstrap-btn {
@@ -91,16 +91,16 @@
             }
           </style>
           <div class="data-display" id="football-data">
-            <h2 id="football">⚽ La liga</h2>
+            <h2 class="h2-title" id="football">⚽ La liga</h2>
           </div>
           <div class="data-display" id="champions-data">
-            <h2 id="champions">✨ Champions</h2>
+            <h2 class="h2-title" id="champions">✨ Champions</h2>
           </div>
           <div class="data-display" id="f1-data">
-            <h2 id="f1">🏁 F1</h2>
+            <h2 class="h2-title" id="f1">🏁 F1</h2>
           </div>
           <div class="data-display" id="sports-data">
-            <h2 id="sports">🏀 Canales de deportes</h2>
+            <h2 class="h2-title" id="sports">🏀 Canales de deportes</h2>
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@
       function loadItems(divName, items) {
         const div = document.querySelector(`#${divName}`);
         for (let value of items) {
-          div.appendChild(createTypeElement("h3", value["name"]));
+          div.appendChild(createTypeElement("h3", value["name"], [{ key: "class", value: "h3-title" }]));
           var diiv = createTypeElement("div");
           div.appendChild(diiv);
           for (let i = 0; i < value[1080].length; i++) {

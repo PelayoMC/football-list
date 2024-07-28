@@ -23,8 +23,11 @@
           padding-left: 1rem;
         }
         .container-fluid {
-          font-size: x-large;
+          font-size: large !important;
           font-family: "Courier New", Courier, monospace;
+        }
+        a:link {
+          text-decoration: none;
         }
       </style>
       <h1 id="title">Listado de canales</h1>
@@ -82,7 +85,8 @@
               font-size: 1.5rem;
               line-height: 1.5;
               border-radius: 0.5rem;
-              color: var(--main-color);
+              color: var(--main-bg-color);
+              font-weight: bold;
             }
             .btn-blue {
               background-color: var(--fhd-btn-color);
@@ -131,7 +135,7 @@
           var diiv = createTypeElement("div");
           div.appendChild(diiv);
           for (let i = 0; i < value[1080].length; i++) {
-            var button = createTypeElement("button", `1080 - ${i + 1}`, [
+            var button = createTypeElement("a", `1080 - ${i + 1}`, [
               { key: "class", value: "bootstrap-btn btn-blue" },
               { key: "href", value: value[1080][i] },
             ]);
@@ -139,7 +143,7 @@
           }
           if (value[720])
             for (let j = 0; j < value[720].length; j++) {
-              var button = createTypeElement("button", `720 - ${j + 1}`, [
+              var button = createTypeElement("a", `720 - ${j + 1}`, [
                 { key: "class", value: "bootstrap-btn btn-orange" },
                 { key: "href", value: value[720][j] },
               ]);

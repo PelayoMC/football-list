@@ -1,0 +1,23 @@
+body {
+  color: var(--main-color) !important;
+  background-color: var(--main-bg-color) !important;
+  padding-left: 1rem;
+}
+.container-fluid {
+  font-size: large !important;
+  font-family: "Courier New", Courier, monospace;
+}
+#main {
+  display: flex;
+  flex-direction: row;
+}
+a:link {
+  text-decoration: none;
+}
+#navigation {
+  top: 0;
+  position: sticky;
+  align-self: flex-start;
+  flex-grow: 1;
+  padding-top: 1rem;
+}

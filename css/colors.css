@@ -1,0 +1,22 @@
+:root {
+  --main-color: white;
+  --main-bg-color: #424651;
+  --fhd-btn-color: #007bff;
+  --fhd-btn-hover-color: #0069d9;
+  --hd-btn-color: #fd7424;
+  --hd-btn-hover-color: #ff5100;
+}
+.btn-blue {
+  background-color: var(--fhd-btn-color);
+}
+.btn-blue:hover {
+  background-color: var(--fhd-btn-hover-color);
+  cursor: pointer;
+}
+.btn-orange {
+  background-color: var(--hd-btn-color);
+}
+.btn-orange:hover {
+  background-color: var(--hd-btn-hover-color);
+  cursor: pointer;
+}

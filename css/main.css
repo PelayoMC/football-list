@@ -25,6 +25,9 @@ a:link {
   border: 2px white solid;
   font-size: 30px;
 }
+.nav-link:hover {
+  background-color: white;
+}
 #navigation {
   top: 0;
   position: sticky;

@@ -1,0 +1,24 @@
+const url = "https://miguia.tv/v/test";
+const proxy = "https://corsproxy.io/?";
+function obtainSchedule(extension) {
+  fetch(proxy + url + extension)
+    .then((response) => response.text())
+    .then((html) => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      const data = Array.from(doc.querySelectorAll(".media-body")).map((el) => {
+        const children = el.children;
+        const hour = children[0].children[1].children[1].getAttribute("data-unixtime");
+        const event = children[2].innerHTML;
+        console.log(hour);
+        console.log(event);
+        return [hour, event];
+      });
+      if (data.length === 0) alert("Error cargando datos");
+      console.log(data);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      alert("Error cargando datos");
+    });
+}

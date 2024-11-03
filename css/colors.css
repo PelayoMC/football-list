@@ -1,11 +1,22 @@
 :root {
   --main-color: white;
   --main-bg-color: #424651;
+  --sc-btn-color: #f8f9fa;
+  --sc-btn-hover-color: #f8f9facb;
   --fhd-btn-color: #007bff;
   --fhd-btn-hover-color: #0069d9;
   --hd-btn-color: #fd7424;
   --hd-btn-hover-color: #ff5100;
 }
+
+.btn-white {
+  background-color: var(--sc-btn-color);
+}
+.btn-white:hover {
+  background-color: var(--sc-btn-hover-color);
+  cursor: pointer;
+}
+
 .btn-blue {
   background-color: var(--fhd-btn-color);
 }
@@ -13,6 +24,7 @@
   background-color: var(--fhd-btn-hover-color);
   cursor: pointer;
 }
+
 .btn-orange {
   background-color: var(--hd-btn-color);
 }

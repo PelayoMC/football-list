@@ -2,16 +2,22 @@
   "liga": [
     {
       "name": "La liga TV BAR",
+      "asset": "////",
+      "schedule": "/////",
       "1080": ["acestream://aa82e7d4f03061f2144a2f4be22f2e2210d42280"],
       "720": ["acestream://512aeadf50d91603d15b32f1e408166536ec4ac9"]
     },
     {
       "name": "La liga TV",
+      "asset": "////",
+      "schedule": "/////",
       "1080": ["acestream://1969c27658d4c8333ab2c0670802546121a774a5"],
       "720": ["acestream://7d8c87e057be98f00f22e23b23fbf08999e4b02f"]
     },
     {
       "name": "DAZN LaLiga",
+      "asset": "////",
+      "schedule": "/////",
       "1080": [
         "acestream://1960a9be8ae9e8c755330218eac4c5805466290a",
         "acestream://75251ba975132ec9a202806ba5bf606e87280c96",
@@ -21,6 +27,8 @@
     },
     {
       "name": "DAZN LaLiga 2",
+      "asset": "////",
+      "schedule": "/////",
       "1080": [
         "acestream://e33e666c393ef04ebe99a9b92135d2e0b48c4d10",
         "acestream://0950c37fe1ea817fc561c611ae943d58505f7a79",
@@ -29,11 +37,15 @@
     },
     {
       "name": "La liga Hypermotion",
+      "asset": "////",
+      "schedule": "/////",
       "1080": ["acestream://4c46585214b23b1d802ef2168060c7649a3894cf"],
       "720": ["acestream://06b367c22394a1358c9cefa0cb5d0b64b9b2b3f4"]
     },
     {
       "name": "La liga Hypermotion 2",
+      "asset": "////",
+      "schedule": "/////",
       "1080": ["acestream://d81b4f2f3fde433539c097b2edc9b587ca47b087"],
       "720": ["acestream://2709d0ab86cb6ce7ba4d3ad188d7fa80668f2924"]
     }
@@ -41,6 +53,8 @@
   "champions": [
     {
       "name": "M.L. Campeones MultiAudio",
+      "asset": "////",
+      "schedule": "/////",
       "1080": [
         "acestream://f096a64dd756a6d549aa7b12ee9acf7eee27e833",
         "acestream://1d79a7543d691666135669f89f3541f54e2dd0a9",
@@ -53,11 +67,15 @@
     },
     {
       "name": "M.L. Campeones 2",
+      "asset": "////",
+      "schedule": "/////",
       "1080": ["acestream://fc2fe31b0bce25e2dc7ab4d262bf645e2be5a393"],
       "720": ["acestream://6753492c1908274c268a1b28e2a054a0ff8f86f9"]
     },
     {
       "name": "M.L. Campeones 3",
+      "asset": "////",
+      "schedule": "/////",
       "1080": ["acestream://ad372cba73aa0ece207a79532b3e30b731136bb2"],
       "720": ["acestream://d59fe9978eed49f256b312a60671b5bce43d3f24"]
     }
@@ -65,6 +83,8 @@
   "f1": [
     {
       "name": "DAZN F1",
+      "asset": "////",
+      "schedule": "/////",
       "1080": [
         "acestream://5789ca155323664edd293b848606688edf803f4d",
         "acestream://9dad717d99b29a05672166258a77c25b57713dd5"
@@ -73,6 +93,8 @@
     },
     {
       "name": "DAZN F1 Multicam",
+      "asset": "////",
+      "schedule": "/////",
       "1080": [
         "acestream://ee38ea1806129de000bd7925a5d52554d70bb560",
         "acestream://76f48ddb3066dd67c1f73a1d847a392c8890032d"
@@ -80,34 +102,48 @@
     },
     {
       "name": "DAZN F1 TV",
+      "asset": "////",
+      "schedule": "/////",
       "1080": ["acestream://8c92cfef8dd37e2dd2d3b8985b81cc7708e24d3c"]
     }
   ],
   "sports": [
     {
       "name": "DAZN 1",
+      "asset": "////",
+      "schedule": "/////",
       "1080": ["acestream://8ca07071b39185431f8e940ec98d1add9e561639"],
       "720": ["acestream://eaff9293c76a324c750ef5094c2a4e2c96518d1f"]
     },
     {
       "name": "DAZN 2",
+      "asset": "////",
+      "schedule": "/////",
       "1080": ["acestream://60dbeeb299ec04bf02bc7426d827547599d3d9fc"],
       "720": ["acestream://7aa402bab9fff43258fbcf401881a39475f30aaf"]
     },
     {
       "name": "DAZN 3",
+      "asset": "////",
+      "schedule": "/////",
       "1080": ["acestream://a8ffddef56f082d4bb5c0be0d3d2fdd8c16dbd97"]
     },
     {
       "name": "DAZN 4",
+      "asset": "////",
+      "schedule": "/////",
       "1080": ["acestream://2fcdf7a19c0858f686efdfabd3c8c2b92bf6bcfd"]
     },
     {
       "name": "EuroSport 1",
+      "asset": "////",
+      "schedule": "/////",
       "1080": ["acestream://5e4cd48c79f991fcbee2de8b9d30c4b16de3b952"]
     },
     {
       "name": "EuroSport 2",
+      "asset": "////",
+      "schedule": "/////",
       "1080": ["acestream://c373da9e901d414b7384e671112e64d5a2310c29"]
     }
   ]

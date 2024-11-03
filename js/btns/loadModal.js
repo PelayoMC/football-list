@@ -1,16 +1,16 @@
-document.addEventListener("DOMContentLoaded", function (event) {
-  // Get the modal, open button, and close button elements
+function closeModal() {
+  const modal = document.getElementById("myModal");
+  document.getElementById("navigation").style.position = "sticky";
+  document.getElementById("modal-table").remove();
+  modal.style.display = "none";
+}
+document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("myModal");
   const closeButton = document.querySelector(".close-button");
-  closeButton.addEventListener("click", () => {
-    document.getElementById("navigation").style.position = "sticky";
-    modal.style.display = "none";
-  });
-  // Hide the modal when clicking outside of the modal content
+  closeButton.addEventListener("click", () => closeModal());
   window.addEventListener("click", (event) => {
     if (event.target === modal) {
-      document.getElementById("navigation").style.position = "sticky";
-      modal.style.display = "none";
+      closeModal();
     }
   });
 });

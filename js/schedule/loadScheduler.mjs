@@ -6,6 +6,7 @@ function convertDate(unixDate) {
 
 function crateElements(elements) {
   const table = document.createElement("table");
+  table.setAttribute("id", "modal-table");
   const newHeaders = document.createElement("tr");
   const titleDate = document.createElement("th");
   titleDate.textContent = "FECHA";

@@ -16,8 +16,24 @@
   background-color: var(--main-bg-color);
   padding: 20px;
   border-radius: 5px;
-  width: 300px;
+  max-width: 63vw;
   text-align: center;
+  overflow-y: scroll;
+}
+
+#modal-data {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 50px 0;
+}
+
+td {
+  padding: 5px 0;
+  text-align: left;
 }
 
 /* Close button styling */

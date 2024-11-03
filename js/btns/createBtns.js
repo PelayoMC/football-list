@@ -9,8 +9,10 @@ export function createTypeElement(attrs) {
   if (onclick) {
     element.setAttribute("id", `btn-${onclick}`);
     element.addEventListener("click", async () => {
-      document.getElementById("navigation").style.display = "none";
+      const { obtainSchedule } = await import("../schedule/loadScheduler.mjs");
+      document.getElementById("navigation").style.position = "static";
       document.getElementById("myModal").style.display = "flex";
+      obtainSchedule(283);
     });
   }
   return element;

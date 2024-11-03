@@ -16,7 +16,7 @@ async function loadItems(divName, items) {
     });
     div.appendChild(diiv);
     // SCHEDULE
-    createScheduleBtn(diiv, "🕒", `${i + 1}`);
+    if (value.schedule) createScheduleBtn(diiv, "🕒", `${i + 1}`);
     for (let i = 0; i < value[1080].length; i++) {
       // 1080p
       createBlueBtn(diiv, "1080p", value[1080][i]);
@@ -31,7 +31,6 @@ async function loadItems(divName, items) {
 fetch("data.json")
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
     loadItems("football-data", data.liga);
     loadItems("champions-data", data.champions);
     loadItems("f1-data", data.f1);

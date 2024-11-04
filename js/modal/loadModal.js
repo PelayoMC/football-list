@@ -1,10 +1,5 @@
-function closeModal() {
-  const modal = document.getElementById("myModal");
-  document.getElementById("navigation").style.position = "sticky";
-  document.getElementById("modal-table").remove();
-  modal.style.display = "none";
-}
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
+  const { closeModal } = await import("./modalActions.mjs");
   const modal = document.getElementById("myModal");
   const closeButton = document.querySelector(".close-button");
   closeButton.addEventListener("click", () => closeModal());

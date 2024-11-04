@@ -34,7 +34,8 @@ function crateElements(elements) {
 
 const url = "https://miguia.tv/v/";
 const proxy = "https://corsproxy.io/?";
-export function obtainSchedule(extension) {
+export async function obtainSchedule(extension) {
+  const { openModal, closeModal } = await import("../modal/modalActions.mjs");
   fetch(proxy + url + extension)
     .then((response) => response.text())
     .then((html) => {
@@ -57,7 +58,11 @@ export function obtainSchedule(extension) {
       if (data.length === 0) alert("Error cargando datos");
       crateElements(data);
     })
+    .then(() => {
+      openModal();
+    })
     .catch((error) => {
+      closeModal();
       console.error("Error:", error);
       alert("Error cargando datos");
     });

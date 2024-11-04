@@ -9,8 +9,8 @@ export function createTypeElement(attrs) {
   if (onclick) {
     element.setAttribute("id", `btn-${onclick}`);
     element.addEventListener("click", async () => {
-      const { openModal } = await import("./modalActions.mjs");
-      openModal(schedule);
+      const { obtainSchedule } = await import("../schedule/loadScheduler.mjs");
+      obtainSchedule(schedule);
     });
   }
   return element;

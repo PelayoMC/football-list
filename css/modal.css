@@ -32,9 +32,26 @@ table {
   border-spacing: 50px 0;
 }
 
+table th {
+  padding-bottom: 15px;
+}
+
 td {
   padding: 15px 0;
   text-align: left;
+}
+
+.actual-event {
+  outline: red solid;
+}
+
+.event-date {
+  vertical-align: text-top;
+}
+
+.event-title {
+  font-size: larger;
+  font-weight: bold;
 }
 
 /* Close button styling */

@@ -1,5 +1,5 @@
 export function createTypeElement(attrs) {
-  const { type, attributes, inner, onclick } = attrs;
+  const { type, attributes, inner, onclick, schedule } = attrs;
   var element = document.createElement(type);
   if (attributes)
     for (let att of attributes) {
@@ -9,17 +9,15 @@ export function createTypeElement(attrs) {
   if (onclick) {
     element.setAttribute("id", `btn-${onclick}`);
     element.addEventListener("click", async () => {
-      const { obtainSchedule } = await import("../schedule/loadScheduler.mjs");
-      document.getElementById("navigation").style.position = "static";
-      document.getElementById("myModal").style.display = "flex";
-      obtainSchedule(283);
+      const { openModal } = await import("./modalActions.mjs");
+      openModal(schedule);
     });
   }
   return element;
 }
 
 function createBtnElement(attrs) {
-  const { parent, text, color, onclick } = attrs;
+  const { parent, text, color, onclick, schedule } = attrs;
   var attrArray = [];
   if (color) attrArray.push({ key: "class", value: color });
   parent.appendChild(
@@ -28,16 +26,18 @@ function createBtnElement(attrs) {
       inner: text,
       attributes: attrArray,
       onclick: onclick,
+      schedule: schedule,
     })
   );
 }
 
-export function createScheduleBtn(parent, text, value) {
+export function createScheduleBtn(parent, text, value, schedule) {
   createBtnElement({
     parent: parent,
     color: "bootstrap-btn btn-white",
     text: text,
     onclick: value,
+    schedule: schedule,
   });
 }
 

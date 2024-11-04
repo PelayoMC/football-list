@@ -16,7 +16,7 @@ async function loadItems(divName, items) {
     });
     div.appendChild(diiv);
     // SCHEDULE
-    if (value.schedule) createScheduleBtn(diiv, "🕒", `${i + 1}`);
+    if (value.schedule) createScheduleBtn(diiv, "🕒", `${i + 1}`, value.schedule);
     for (let i = 0; i < value[1080].length; i++) {
       // 1080p
       createBlueBtn(diiv, "1080p", value[1080][i]);

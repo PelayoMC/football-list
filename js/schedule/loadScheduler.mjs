@@ -1,6 +1,8 @@
 function convertDate(unixDate) {
-  var date = new Date(unixDate * 1000).toISOString();
-  var split = date.split("T");
+  var date = new Date(unixDate * 1000);
+  date.setHours(date.getHours() + 1);
+  var isoString = date.toISOString();
+  var split = isoString.split("T");
   return split[0] + " " + split[1].split(".")[0];
 }
 
@@ -52,8 +54,6 @@ export function obtainSchedule(extension) {
           };
         })
         .filter((el) => el.length > 50);
-      console.log(data);
-
       if (data.length === 0) alert("Error cargando datos");
       crateElements(data);
     })

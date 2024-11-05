@@ -16,18 +16,8 @@
     <script src="./js/modal/loadModal.js"></script>
   </head>
   <body>
-    <div id="loader" class="modal">
-      <div class="loader"></div>
-    </div>
     <div class="container-fluid">
       <h1 id="title">Listado de canales</h1>
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-          <span class="close-button">&times;</span>
-          <h2 id="modal-title">HORARIOS</h2>
-          <div id="modal-data"></div>
-        </div>
-      </div>
       <div id="main">
         <nav id="navigation">
           <div class="nav-link first-nav" onclick='location.href="#football"'>⚽</div>
@@ -48,6 +38,19 @@
           <div class="data-display" id="sports-data">
             <h2 class="h2-title" id="sports">🏀 Canales de deportes</h2>
           </div>
+        </div>
+      </div>
+      <div id="loader" class="modal">
+        <div class="loader"></div>
+      </div>
+      <div id="error" class="modal">
+        <div id="error-msg"></div>
+      </div>
+      <div id="scheduler" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2 id="modal-title">HORARIOS</h2>
+          <div id="modal-data"></div>
         </div>
       </div>
     </div>

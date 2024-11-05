@@ -42,7 +42,7 @@ td {
 }
 
 .actual-event {
-  outline: var(--modal-event-color) red solid;
+  outline: var(--modal-event-color) solid;
 }
 
 .event-date {

@@ -29,10 +29,10 @@ export async function obtainSchedule(extension) {
             })
             .filter((el) => el.ms > initialFilterDate())
             .filter((el) => el.ms < endingFilterDate());
+          closeLoader();
           if (data.length === 0) throw new Error("Sin datos que cargar");
-          crateElements(data);
+          else crateElements(data);
         })
-        .then(() => closeLoader())
         .then(() => openModal())
         .catch((error) => {
           closeModal();

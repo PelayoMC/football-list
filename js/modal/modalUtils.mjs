@@ -4,7 +4,10 @@ export async function openModal() {
 }
 export async function closeModal() {
   const modal = document.getElementById("myModal");
+  const modalTable = document.getElementById("modal-table");
   document.getElementById("navigation").style.position = "sticky";
-  document.getElementById("modal-table").remove();
-  modal.style.display = "none";
+  if (modalTable) {
+    modalTable.remove();
+    modal.style.display = "none";
+  }
 }

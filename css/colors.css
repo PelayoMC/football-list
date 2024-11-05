@@ -7,6 +7,9 @@
   --fhd-btn-hover-color: #0069d9;
   --hd-btn-color: #fd7424;
   --hd-btn-hover-color: #ff5100;
+  --loader-color: #3498db;
+  --modal-bg-color: rgba(0, 0, 0, 0.5);
+  --modal-event-color: rgba(241, 0, 0, 0.849);
 }
 
 .btn-white {

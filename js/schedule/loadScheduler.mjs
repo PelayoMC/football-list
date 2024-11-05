@@ -1,6 +1,8 @@
 export async function obtainSchedule(extension) {
-  const { openModal, closeModal } = await import("../modal/modalActions.mjs");
+  const { openModal, closeModal } = await import("../modal/modalUtils.mjs");
   const { convertDate, initialFilterDate, endingFilterDate, crateElements } = await import("./loadUtils.mjs");
+  const { openLoader, closeLoader } = await import("../loader/loaderUtils.mjs");
+  openLoader();
   fetch("config.json")
     .then((res) => res.json())
     .then((conf) => {
@@ -17,8 +19,6 @@ export async function obtainSchedule(extension) {
               const eventTitle = children[1].innerText;
               const eventSubtitle = children[2].innerHTML;
               const length = parseInt(children[0].children[2].children[0].innerText.split(" ")[1]);
-              console.log(eventSubtitle);
-
               return {
                 ms: hour,
                 date: `${convertDate(hour)}`,
@@ -32,9 +32,8 @@ export async function obtainSchedule(extension) {
           if (data.length === 0) throw new Error("Sin datos que cargar");
           crateElements(data);
         })
-        .then(() => {
-          openModal();
-        })
+        .then(() => closeLoader())
+        .then(() => openModal())
         .catch((error) => {
           closeModal();
           console.error("Error:", error);

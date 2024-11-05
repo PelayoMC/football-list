@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background-color: var(--modal-bg-color); /* Semi-transparent background */
   justify-content: center;
   align-items: center;
 }
@@ -42,7 +42,7 @@ td {
 }
 
 .actual-event {
-  outline: red solid;
+  outline: var(--modal-event-color) red solid;
 }
 
 .event-date {

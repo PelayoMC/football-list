@@ -1,5 +1,5 @@
 export async function loadDataMiGuiaTv(html) {
-  const { convertDate, initialFilterDate, endingFilterDate } = await import("../../schedule/scheduleUtils.mjs");
+  const { convertDate, initialFilterDate, endingFilterDate } = await import("../../schedule/scheduleUtils.js");
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");
   const data = Array.from(doc.querySelectorAll(".media-body"))

@@ -9,7 +9,7 @@ export function createTypeElement(attrs) {
   if (onclick) {
     element.setAttribute("id", `btn-${onclick}`);
     element.addEventListener("click", async () => {
-      const { obtainSchedule } = await import("../schedule/loadScheduler.mjs");
+      const { obtainSchedule } = await import("../schedule/loadScheduler.js");
       obtainSchedule(schedule);
     });
   }

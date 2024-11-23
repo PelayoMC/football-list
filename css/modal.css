@@ -15,8 +15,8 @@
 .modal-content-scroll {
   background-color: var(--main-bg-color);
   padding: 20px;
-  border-radius: 5px;
-  max-width: 63vw;
+  border-radius: 15px;
+  min-height: 70vh;
   height: 50vh;
   text-align: center;
   overflow-y: scroll;
@@ -50,11 +50,15 @@ td {
 }
 
 .actual-event {
-  outline: var(--modal-event-color) solid;
+  /* outline: var(--modal-event-color) solid; */
+  box-shadow: 0px 0px 0px 4px var(--modal-event-color);
+  border-radius: 50px;
 }
 
 .event-date {
   vertical-align: text-top;
+  white-space: pre-line;
+  padding-left: 2rem;
 }
 
 .event-title {

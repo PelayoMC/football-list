@@ -34,7 +34,9 @@ export function crateElements(elements) {
     const newRow = document.createElement("tr");
     const element = elements[i];
     const dataDate = document.createElement("td");
-    dataDate.textContent = element.date;
+    const splittedDate = element.date.split(" ");
+    dataDate.textContent = splittedDate[0] + "\r\n";
+    dataDate.textContent += splittedDate[1];
     dataDate.className = "event-date";
     newRow.appendChild(dataDate);
     const tdEvent = document.createElement("td");

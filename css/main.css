@@ -1,8 +1,10 @@
 body {
   color: var(--main-color) !important;
   background-color: var(--main-bg-color) !important;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
 }
+
+/* MAIN COMPONENT */
 .container-fluid {
   font-size: large !important;
   font-family: "Courier New", Courier, monospace;
@@ -11,9 +13,13 @@ body {
   display: flex;
   flex-direction: row;
 }
+
+/* LINKS */
 a:link {
   text-decoration: none;
 }
+
+/* NAVIGATION */
 .first-nav {
   margin-top: 15px;
 }
